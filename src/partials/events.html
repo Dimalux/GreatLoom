@@ -1,0 +1,77 @@
+<section class="events">
+    <div class="events-label">Events</div>
+    <h2 class="events-title">Upcoming Events<br>at Booksy</h2>
+    <p class="events-description">Discover readings, workshops, and bookish gatherings — online<br>and offline. Everyone's welcome.</p>
+    
+    <ul class="events-list">
+        <li class="events-item">
+            <img src="./img/events/family.jpg" alt="Cozy Book Club meeting" class="events-image">
+            <div class="events-content">
+                <h4 class="events-name">Cozy Book Club — "The Midnight Library"</h4>
+                <div class="events-meta">In-store | June 5, 6:30 PM</div>
+                <p class="events-text">Join us for an evening of tea, thoughtful conversation, and shared reflections as we<br>dive into Matt Haig's bestseller.</p>
+                <button type="button" class="events-register">Register</button>
+            </div>
+        </li>
+        
+        <li class="events-item">
+            <img src="./img/events/team.jpg" alt="Writing Workshop" class="events-image">
+            <div class="events-content">
+                <h4 class="events-name">Book Cover Design Workshop</h4>
+                <div class="events-meta">Online | June 12, 7:00 PM</div>
+                <p class="events-text">A hands-on session for aspiring designers and curious readers. Learn what makes a cover stand out — from concept to print.</p>
+                <button type="button" class="events-register">Register</button>
+            </div>
+        </li>
+        
+        <li class="events-item">
+            <img src="./img/events/children.jpg" alt="Author Reading" class="events-image">
+            <div class="events-content">
+                <h4 class="events-name">Children's Story Hour</h4>
+                <div class="events-meta">In-store | June 15, 11:00 AM</div>
+                <p class="events-text">A magical morning of stories, games, and imagination for our youngest book lovers (ages 4-8)</p>
+                <button type="button" class="events-register">Register</button>
+            </div>
+        </li>
+    </ul>
+    
+    <div class="events-navigation">
+        <div class="events-indicators">
+            <div class="events-indicator active"></div>
+            <div class="events-indicator"></div>
+            <div class="events-indicator"></div>
+        </div>
+        <div class="events-nav-buttons">
+            <button type="button" class="events-nav-btn" id="prevBtn"></button>
+            <button type="button" class="events-nav-btn" id="nextBtn"></button>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Modal -->
+<div class="modal-overlay" id="contactModal">
+    <div class="modal-content">
+        <button class="modal-close" id="closeModal">✕</button>
+        <h3 class="modal-title">Register</h3>
+        <p class="modal-event-name" id="modalEventName">Event Name</p>
+        
+        <form class="modal-form" id="modalForm">
+            <div class="form-group">
+                <label for="userName">Name*</label>
+                <input type="text" id="userName" name="name" placeholder="Ann" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="userEmail">Email*</label>
+                <input type="email" id="userEmail" name="email" placeholder="hello@booksy.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="userMessage">Message</label>
+                <textarea id="userMessage" name="message" placeholder="Type your message..." rows="6"></textarea>
+            </div>
+            
+            <button type="submit" class="modal-submit">Register</button>
+        </form>
+    </div>
+</div>
