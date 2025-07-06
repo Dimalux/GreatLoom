@@ -1,0 +1,217 @@
+/* ---------- Hero ---------- */
+
+.hero {
+  margin: 0 auto;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ---------- Заголовок + кнопки ---------- */
+
+.hero-title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-title {
+  width: 343px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #0b0500;
+}
+
+.hero-swiper-buttons {
+  display: none;
+}
+
+/* ---------- Стилі кнопок прокрутки ---------- */
+
+.swiper-btn {
+  border: 1px solid rgba(11, 5, 0, 0.15);
+  background-color: #e15d05;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  color: #0b0500;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-btn:hover,
+.swiper-btn:focus {
+  background-color: #d96914;
+}
+
+.swiper-btn.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ---------- Слайдер ---------- */
+
+.hero-swiper-box {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-gallery {
+  width: 100%;
+  height: auto;
+}
+
+.hero-slide-img {
+  display: block;
+  width: 100%;
+  /* height: auto; */
+  object-fit: cover;
+}
+
+/* ---------- Overlay ---------- */
+
+.hero-overlay {
+  position: absolute;
+  top: 90px;
+  left: 16px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #fff;
+  width: 172px;
+}
+
+.hero-btn {
+  display: inline-block;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #e15d05;
+  border: 0.52px solid #e15d05;
+  border-radius: 2px;
+  padding: 4px 10px;
+  width: 117px;
+  height: 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #ea8d50;
+}
+
+/* ---------- Mobile ≥375px ---------- */
+@media screen and (min-width: 375px) {
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Tablet ≥768px ---------- */
+@media screen and (min-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .hero-title-box {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-swiper-buttons {
+    display: flex;
+    gap: 24px;
+  }
+
+  .hero-swiper-box {
+    max-width: 600px;
+  }
+
+  .swiper-gallery {
+    width: 704px;
+    height: 274px;
+  }
+
+  .hero-subtitle {
+    font-size: 24px;
+  }
+
+  .hero-btn {
+    padding: 4px 20px;
+    width: 164px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
+
+/* ---------- Desktop ≥1440px ---------- */
+@media screen and (min-width: 1440px) {
+  .hero-container {
+    gap: 128px;
+    padding: 0 64px;
+  }
+
+  .hero-title {
+    font-size: 44px;
+  }
+
+  .swiper-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .hero-swiper-box {
+    max-width: 640px;
+  }
+
+  .swiper-gallery {
+    width: 640px;
+    height: 360px;
+  }
+
+  .hero-subtitle {
+    font-size: 28px;
+  }
+
+  .hero-btn {
+    font-size: 18px;
+    padding: 12px 28px;
+  }
+}
