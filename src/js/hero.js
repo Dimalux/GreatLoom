@@ -43,6 +43,21 @@ const slides = [
   },
 ];
 
+const overlayTexts = [
+  {
+    subtitle: 'Get 10% off your first order',
+  },
+  {
+    subtitle: 'Save 15% on some books',
+  },
+  {
+    subtitle: 'Summer Sale! Up to -40% discounts',
+  },
+  {
+    subtitle: 'Last chance to buy our spring bestsellers',
+  },
+];
+
 function renderSlides(slides) {
   const container = document.querySelector('#hero-swiper');
   if (!container) {
@@ -80,6 +95,16 @@ function updateButtonsState() {
   next.classList.toggle('disabled', swiper.isEnd);
 }
 
+function updateOverlayText(index) {
+  const subtitleEl = document.querySelector('.hero-subtitle');
+  if (!subtitleEl) return;
+
+  const textData = overlayTexts[index];
+  if (textData) {
+    subtitleEl.textContent = textData.subtitle;
+  }
+}
+
 let swiper;
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -100,8 +125,14 @@ window.addEventListener('DOMContentLoaded', () => {
         prevEl: prevBtn,
       },
       on: {
-        init: updateButtonsState,
-        slideChange: updateButtonsState,
+        init: () => {
+          updateButtonsState();
+          updateOverlayText(0); // Показати текст для першого слайду
+        },
+        slideChange: function () {
+          updateButtonsState();
+          updateOverlayText(this.activeIndex);
+        },
       },
     });
   });

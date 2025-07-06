@@ -19,41 +19,80 @@
   align-items: flex-start;
 }
 
+@media screen and (min-width: 768px) {
+  .hero-title-box {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
 .hero-title {
-  width: 343px;
+  width: 100%;
   font-weight: 600;
+  font-size: 40px;
   line-height: 1.2;
   letter-spacing: -0.01em;
   color: #0b0500;
+  text-align: left;
 }
 
+@media screen and (min-width: 768px) {
+  .hero-title {
+    /* width: 560px; */
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero-title {
+    /* width: 1168px; */
+    font-size: 52px;
+  }
+}
+
+/* ---------- Кнопки прокрутки ---------- */
 .hero-swiper-buttons {
   display: none;
 }
 
-/* ---------- Стилі кнопок прокрутки ---------- */
+@media screen and (min-width: 768px) {
+  .hero-swiper-buttons {
+    display: flex;
+    gap: 24px;
+  }
+}
 
 .swiper-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid rgba(11, 5, 0, 0.15);
-  background-color: #e15d05;
-  padding: 12px;
   width: 48px;
   height: 48px;
-  color: #0b0500;
-  font-size: 20px;
-  border: none;
+  flex-shrink: 0;
   cursor: pointer;
+  border-radius: 2px;
+  background-color: #e15d05;
   transition: background-color 0.3s ease;
 }
 
 .swiper-btn:hover,
 .swiper-btn:focus {
-  background-color: #d96914;
+  background-color: #fceee6;
+}
+
+.swiper-btn.active {
+  background-color: #5a2502;
 }
 
 .swiper-btn.disabled {
-  opacity: 0.5;
+  background-color: #e15d05;
+  opacity: 0.2;
   pointer-events: none;
+}
+
+.arrows {
+  fill: #0b0500;
 }
 
 /* ---------- Слайдер ---------- */
@@ -61,11 +100,20 @@
 .hero-swiper-box {
   position: relative;
   width: 100%;
-  max-width: 100%;
   border-radius: 8px;
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  .hero-swiper-box {
+    border-radius: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero-swiper-box {
+    border-radius: 16px;
+  }
+}
 .swiper-slide {
   position: relative;
 }
@@ -75,10 +123,23 @@
   height: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .swiper-gallery {
+    border-radius: none;
+    /* width: 704px; */
+    height: 274px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .swiper-gallery {
+    /* width: 1312px; */
+    height: 395px;
+  }
+}
 .hero-slide-img {
   display: block;
   width: 100%;
-  /* height: auto; */
+  height: auto;
   object-fit: cover;
 }
 
@@ -86,12 +147,28 @@
 
 .hero-overlay {
   position: absolute;
-  top: 90px;
+  bottom: 16px;
   left: 16px;
   z-index: 999;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-overlay {
+    bottom: 32px;
+    left: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-overlay {
+    bottom: 56px;
+    left: 56px;
+  }
 }
 
 .hero-subtitle {
@@ -100,21 +177,39 @@
   line-height: 1.4;
   letter-spacing: -0.01em;
   color: #fff;
-  width: 172px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-subtitle {
+    /* max-width: 274px; */
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-subtitle {
+    /* max-width.: 392px; */
+    font-size: 52px;
+  }
 }
 
 .hero-btn {
   display: inline-block;
-  font-size: 8px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #ffffff;
-  background-color: #e15d05;
   border: 0.52px solid #e15d05;
   border-radius: 2px;
   padding: 4px 10px;
   width: 117px;
   height: 20px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #e15d05;
   text-decoration: none;
   text-align: center;
   transition: background-color 0.3s ease;
@@ -123,95 +218,23 @@
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: #ea8d50;
+  border: 1px solid #0b0500;
 }
 
-/* ---------- Mobile ≥375px ---------- */
-@media screen and (min-width: 375px) {
-  .hero-title {
-    font-size: 40px;
-  }
-
-  .hero-subtitle {
-    font-size: 20px;
-  }
-}
-
-/* ---------- Tablet ≥768px ---------- */
 @media screen and (min-width: 768px) {
-  .hero-container {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .hero-title-box {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-  }
-
-  .hero-title {
-    font-size: 32px;
-  }
-
-  .hero-swiper-buttons {
-    display: flex;
-    gap: 24px;
-  }
-
-  .hero-swiper-box {
-    max-width: 600px;
-  }
-
-  .swiper-gallery {
-    width: 704px;
-    height: 274px;
-  }
-
-  .hero-subtitle {
-    font-size: 24px;
-  }
-
   .hero-btn {
+    border: 1px solid #e15d05;
+    border-radius: 4px;
     padding: 4px 20px;
     width: 164px;
     height: 32px;
     font-size: 16px;
   }
 }
-
-/* ---------- Desktop ≥1440px ---------- */
 @media screen and (min-width: 1440px) {
-  .hero-container {
-    gap: 128px;
-    padding: 0 64px;
-  }
-
-  .hero-title {
-    font-size: 44px;
-  }
-
-  .swiper-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 24px;
-  }
-
-  .hero-swiper-box {
-    max-width: 640px;
-  }
-
-  .swiper-gallery {
-    width: 640px;
-    height: 360px;
-  }
-
-  .hero-subtitle {
-    font-size: 28px;
-  }
-
   .hero-btn {
-    font-size: 18px;
-    padding: 12px 28px;
+    padding: 8px 20px;
+    width: 227px;
+    height: 40px;
   }
 }
