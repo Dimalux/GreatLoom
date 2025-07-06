@@ -1,0 +1,28 @@
+/* Для кнопки Shop Now!  -  з помаранчевим фоном */
+
+.btn {
+    display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+gap: 8px;
+
+border: 1px solid #e15d05;
+border-radius: 4px;
+padding: 8px 20px;     /* 12px, 24px (для кнопок Show More, Add To Cart, Register) */
+width: 227px;         /* 342px (для кнопки Show More, Register), 309px (для кнопки Add To Cart)  */
+height: 40px;    
+
+color: #fff;
+background-color: #e15d05;    
+}
+
+/* Для кнопки Buy Now, Learn More - з прозорим фоном*/
+
+.secondary {
+border: 1px solid #0b0500;
+padding: 8px 20px;
+width: 227px;
+color: #0b0500;
+background-color:transparent
+}

@@ -1,28 +1,65 @@
-/* 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+	--color-scheme-1-background: var(--color-bamboo-lightest);
+	--color-neutral-darkest: #0b0500;
+	--color-scheme-1-border: var(--opacity-neutral-darkest-15);
+	--color-scheme-1-text: var(--color-neutral-darkest);
+	--color-neutral-lighter: #dad9d8;
+	--color-white: #fff;
+	--color-neutral-lightest: #f2f2f2;
+	--color-neutral-light: #b5b4b2;
+	--color-neutral: #85827f;
+	--color-neutral-dark: #54504c;
+	--color-neutral-darker: #231e19;
+	--opacity-transparent: rgba(255, 255, 255, 0);
+	--color-scheme-1-foreground: var(--color-bamboo-lighter);
+	--color-scheme-1-accent: var(--color-neutral-darkest);
+	--opacity-white-5: rgba(255, 255, 255, 0.05);
+	--opacity-white-10: rgba(255, 255, 255, 0.1);
+	--opacity-white-15: rgba(255, 255, 255, 0.15);
+	--opacity-white-20: rgba(255, 255, 255, 0.2);
+	--opacity-white-30: rgba(255, 255, 255, 0.3);
+	--opacity-white-40: rgba(255, 255, 255, 0.4);
+	--opacity-white-50: rgba(255, 255, 255, 0.5);
+	--opacity-white-60: rgba(255, 255, 255, 0.6);
+	--opacity-neutral-darkest-5: rgba(11, 5, 0, 0.05);
+	--opacity-neutral-darkest-10: rgba(11, 5, 0, 0.1);
+	--opacity-neutral-darkest-15: rgba(11, 5, 0, 0.15);
+	--opacity-neutral-darkest-20: rgba(11, 5, 0, 0.2);
+	--opacity-neutral-darkest-30: rgba(11, 5, 0, 0.3);
+	--opacity-neutral-darkest-40: rgba(11, 5, 0, 0.4);
+	--opacity-neutral-darkest-50: rgba(11, 5, 0, 0.5);
+	--opacity-neutral-darkest-60: rgba(11, 5, 0, 0.6);
+	--color-bamboo-lightest: #fceee6;
+	--color-bamboo-lighter: #f9decd;
+	--color-bamboo-light: #ea8d50;
+	--color-bamboo: #e15d05;
+	--color-bamboo-dark: #b44a04;
+	--color-bamboo-darker: #5a2502;
+	--color-bamboo-darkest: #431b01;
+	--color-scheme-2-text: var(--color-neutral-darkest);
+	--color-scheme-2-background: var(--color-bamboo-lighter);
+	--color-scheme-2-border: var(--opacity-neutral-darkest-15);
+	--color-scheme-2-accent: var(--color-neutral-darkest);
+	--color-scheme-2-foreground: var(--color-bamboo-lightest);
+	--color-scheme-3-text: var(--color-neutral-darkest);
+	--color-scheme-3-background: var(--color-bamboo-light);
+	--color-scheme-3-border: var(--opacity-white-20);
+	--color-scheme-3-accent: var(--color-white);
+	--color-scheme-3-foreground: var(--color-bamboo);
+	--color-error-red: #ad0000;
 }
- */
 
 
+/* Загальні налаштування для всієї сторінки */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-font-family: "Rubik", sans-serif;
-   color: #0b0500;
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.5; /* Базова висота рядка */
+  background: #fceee6;
+  color: #0b0500; /* Колір тексту за замовчуванням */
 
   display: flex;
   flex-direction: column;
@@ -34,12 +71,39 @@ font-family: "Rubik", sans-serif;
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
 }
 
- html {
-  scroll-behavior: smooth;
-} 
 
+/* Стилі для заголовків */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
 
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 48px;
+}
+
+@media only screen and (min-width: 1440px) {
+  h1 {
+    font-size: 52px;
+  }
+  
+  h2 {
+    font-size: 48px;
+  }
+}

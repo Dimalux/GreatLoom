@@ -1,0 +1,63 @@
+<div class="modal-backdrop is-hidden">
+  <div class="modal-window">
+    <button class="modal-close" type="button">
+      <svg width="16" height="16">
+        <use href="/greatloom/img/icons/icons.svg#close"></use>
+      </svg>
+    </button>
+
+    <div class="modal-content">
+      <div class="modal-image">
+        <img src="" alt="Book cover" id="modal-book-image" />
+      </div>
+
+      <div class="modal-details">
+        <h2 id="modal-title">Назва книги</h2>
+        <p class="modal-author" id="modal-author">Автор</p>
+        <p class="modal-price" id="modal-price">$0.00</p>
+
+        <form id="order-form">
+          <div class="modal-quantity">
+            <button class="decrement" type="button">-</button>
+            <span id="quantity">1</span>
+            <button class="increment" type="button">+</button>
+          </div>
+
+          <div class="modal-actions">
+            <button class="add-to-cart btn" type="button">Add To Cart</button>
+            <button class="buy-now secondary" type="submit">Buy Now</button>
+          </div>
+        </form>
+
+        <div class="accordion" id="accordion">
+          <div class="ac">
+            <h2 class="ac-header">
+              <button class="ac-trigger">Details</button>
+            </h2>
+            <div class="ac-panel">
+              <p id="details-text">...</p>
+            </div>
+          </div>
+
+          <div class="ac">
+            <h2 class="ac-header">
+              <button class="ac-trigger">Shipping</button>
+            </h2>
+            <div class="ac-panel">
+              <p id="shipping-text">...</p>
+            </div>
+          </div>
+
+          <div class="ac">
+            <h2 class="ac-header">
+              <button class="ac-trigger">Returns</button>
+            </h2>
+            <div class="ac-panel">
+              <p id="returns-text">...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

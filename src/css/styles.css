@@ -1,3 +1,4 @@
+
 /**
   |============================
   | include css partials with
@@ -11,6 +12,9 @@
 @import url('./container.css');
 /* @import url('./animations.css'); */
 
+/* Components style */
+@import url("./buttons.css");
+
 /* Sections style */
 @import url('./header.css');
 @import url('./modal-window.css');
@@ -21,3 +25,4 @@
 @import url('./article.css');
 @import url('./location.css');
 @import url('./footer.css');
+
