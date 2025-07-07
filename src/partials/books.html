@@ -1,69 +1,69 @@
-<main class="container">
-    <section class="books-section">
-        <h1 class="book-visually-hidden">Trending books</h1>
-
-        <div class="book-section-container">
-            <div class="book-section-layout">
-                <aside class="book-sidebar">
-                    <div class="book-sidebar-header">
-                        <h2 class="book-section-title">Books</h2>
-                        <span class="book-count">Showing <span id="showing-count">24</span> of
-                            <span id="total-count">100</span></span>
-                    </div>
-
-                    <ul class="book-categories" role="list">
-                        <li>
-                            <button class="book-category-btn active" data-category="all">
-                                All categories
-                            </button>
-                        </li>
-                        <li>
-                            <button class="book-category-btn" data-category="fiction">
-                                Combined Print and E-book Fiction
-                            </button>
-                        </li>
-                        <li>
-                            <button class="book-category-btn" data-category="nonfiction">
-                                Combined Print & E-book Nonfiction
-                            </button>
-                        </li>
-                        <li>
-                            <button class="book-category-btn" data-category="hardcover">
-                                Hardcover fiction
-                            </button>
-                        </li>
-                        <li>
-                            <button class="book-category-btn" data-category="paperback-fiction">
-                                Paperback trade fiction
-                            </button>
-                        </li>
-                        <li>
-                            <button class="book-category-btn" data-category="paperback-nonfiction">
-                                Paperback nonfiction
-                            </button>
-                        </li>
-                        <li>
-                            <button class="book-category-btn" data-category="advice">
-                                Advice, how-to & Miscellaneous
-                            </button>
-                        </li>
-                        <li>
-                            <button class="book-category-btn" data-category="children">
-                                Children's middle grade hardcover
-                            </button>
-                        </li>
-                    </ul>
-                </aside>
-
-                <div class="book-main-content">
-                    <ul class="book-list" id="book-list" role="list"></ul>
-
-                    <div class="book-pagination">
-                        <button class="show-more-btn" id="show-more-btn" type="button">
-                            Show More
-                        </button>
-                    </div>
+<!-- #region books. -->
+<section class="books-section" id="books">
+    <div class="container">
+        <h2 class="book-visually-hidden">Trending books</h2>
+        
+        <div class="book-section-layout">
+            <div class="book-sidebar">
+                <div class="book-sidebar-header">
+                    <h3 class="book-section-title">Books</h3>
+                    <p class="book-count">
+                        Showing <span id="showing-count">24</span> of <span id="total-count">100</span>
+                    </p>
                 </div>
+        
+                <ul class="book-categories">
+                    <li>
+                        <button class="book-category-btn active" data-category="all">
+                            All categories
+                        </button>
+                    </li>
+                    <li>
+                        <button class="book-category-btn" data-category="Combined Print and E-Book Fiction">
+                            Combined Print and E-book Fiction
+                        </button>
+                    </li>
+                    <li>
+                        <button class="book-category-btn" data-category="Combined Print & E-book Nonfiction">
+                            Combined Print & E-book Nonfiction
+                        </button>
+                    </li>
+                    <li>
+                        <button class="book-category-btn" data-category="Hardcover fiction">
+                            Hardcover fiction
+                        </button>
+                    </li>
+                    <li>
+                        <button class="book-category-btn" data-category="Paperback trade fiction">
+                            Paperback trade fiction
+                        </button>
+                    </li>
+                    <li>
+                        <button class="book-category-btn" data-category="Paperback nonfiction">
+                            Paperback nonfiction
+                        </button>
+                    </li>
+                    <li>
+                        <button class="book-category-btn" data-category="Advice, how-to & Miscellaneous">
+                            Advice, how-to & Miscellaneous
+                        </button>
+                    </li>
+                    <li>
+                        <button class="book-category-btn" data-category="Children's middle grade hardcover">
+                            Children's middle grade hardcover
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="book-main-content">
+                <ul class="book-list" id="book-list" role="list"></ul>
+        
+                <button class="show-more-btn" id="show-more-btn" type="button">
+                    Show More
+                </button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- #endregion -->
