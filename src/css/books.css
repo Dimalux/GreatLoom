@@ -1,7 +1,20 @@
+/* Books Section Container */
+.books-section {
+  padding: 0 64px 32px 64px;
+  background: #fceee6;
+}
+
+.books-section .container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .book-section-layout {
   display: flex;
   align-items: flex-start;
   gap: 24px;
+  width: 100%;
 }
 
 .book-visually-hidden {
@@ -16,6 +29,7 @@
   border: 0;
 }
 
+/* Sidebar Styles */
 .book-sidebar {
   width: 308px;
   flex-shrink: 0;
@@ -32,14 +46,22 @@
 }
 
 .book-section-title {
+  font-family: 'Rubik', sans-serif;
   font-size: 20px;
   font-weight: 700;
+  line-height: 1.5;
   color: #0b0500;
+  margin: 0;
+  flex: 1;
 }
 
 .book-count {
+  font-family: 'Rubik', sans-serif;
   font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
   color: #0b0500;
+  margin: 0;
 }
 
 .book-categories {
@@ -50,17 +72,23 @@
   margin: 0;
 }
 
+.book-categories li {
+  padding: 8px 0;
+}
+
 .book-category-btn {
   background: none;
   border: none;
-  padding: 8px 0;
+  padding: 0;
   text-align: left;
+  font-family: 'Rubik', sans-serif;
   font-size: 18px;
   font-weight: 400;
+  line-height: 1.5;
   color: #0b0500;
   cursor: pointer;
   transition: color 0.15s ease;
-  font-family: inherit;
+  width: 100%;
 }
 
 .book-category-btn:hover {
@@ -78,100 +106,7 @@
   cursor: default;
 }
 
-/* Mobile dropdown styles */
-.book-dropdown {
-  display: none;
-  position: relative;
-  width: 249px;
-}
-
-.book-dropdown-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 8px 12px;
-  border: 1px solid rgba(11, 5, 0, 0.15);
-  border-radius: 4px;
-  background: rgba(11, 5, 0, 0.05);
-  color: #0b0500;
-  font-family:
-    Rubik,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.book-dropdown-toggle:hover {
-  border-color: rgba(11, 5, 0, 0.25);
-}
-
-.book-dropdown-icon {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.15s ease;
-}
-
-.book-dropdown.open .book-dropdown-icon {
-  transform: rotate(180deg);
-}
-
-.book-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  margin-top: 4px;
-  padding: 8px 0;
-  background: #fceee6;
-  border: 1px solid rgba(11, 5, 0, 0.15);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.book-dropdown.open .book-dropdown-menu {
-  display: block;
-}
-
-.book-dropdown-item {
-  display: block;
-  width: 100%;
-  padding: 12px 16px;
-  background: none;
-  border: none;
-  text-align: left;
-  color: #0b0500;
-  font-family:
-    Rubik,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
-}
-
-.book-dropdown-item:hover {
-  background: rgba(225, 93, 5, 0.1);
-}
-
-.book-dropdown-item.active {
-  color: #e15d05;
-  font-weight: 500;
-  background: rgba(225, 93, 5, 0.1);
-}
-
+/* Main Content Area */
 .book-main-content {
   flex: 1;
   display: flex;
@@ -179,6 +114,7 @@
   align-items: center;
   gap: 24px;
   width: 100%;
+  min-width: 0;
 }
 
 .book-list {
@@ -192,105 +128,107 @@
   margin: 0;
 }
 
-.book-item {
+/* Book Card Styles - Targeting JS-generated classes */
+.book-card {
   display: flex;
+  min-width: 221px;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
-  height: auto;
+  flex: 1;
 }
 
-.book-item {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.book-card img {
+  height: 322.819px;
   width: 100%;
-}
-
-.book-image {
-  aspect-ratio: 227/323;
+  aspect-ratio: 227/322.82;
   border-radius: 8px;
   object-fit: cover;
-  width: 100%;
-}
-
-.book-content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.book-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
 }
 
 .book-info {
-  flex: 1;
-  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .book-title {
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.5;
   text-transform: capitalize;
   color: #0b0500;
+  margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .book-author {
+  font-family: 'Rubik', sans-serif;
   font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
   color: #0b0500;
+  margin: 0;
 }
 
 .book-price {
+  font-family: 'Rubik', sans-serif;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.5;
   color: #0b0500;
-  flex-shrink: 0;
+  margin: 16px 0;
 }
 
-.learn-more-btn {
+/* Button Styles */
+.book-learn-btn {
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 40px;
   padding: 8px 20px;
-  border: 1px solid #0b0500;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   border-radius: 4px;
-  background: #fceee6;
+  border: 1px solid #0b0500;
+  background: transparent;
   color: #0b0500;
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  line-height: 1.5;
   cursor: pointer;
   transition: all 0.15s ease;
-  font-family: inherit;
+  text-decoration: none;
+  width: 100%;
 }
 
-.learn-more-btn:hover {
+.book-learn-btn:hover {
   background: #0b0500;
   color: #fceee6;
 }
 
 .show-more-btn {
+  display: flex;
   width: 342px;
   max-width: 100%;
-  height: 48px;
   padding: 12px 24px;
-  border: 1px solid #e15d05;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   border-radius: 4px;
+  border: 1px solid #e15d05;
   background: #e15d05;
   color: #fff;
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  line-height: 1.5;
   cursor: pointer;
   transition: background 0.15s ease;
-  font-family: inherit;
 }
 
 .show-more-btn:hover {
@@ -306,7 +244,23 @@
   display: none;
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .books-section {
+    padding: 0 32px 32px 32px;
+  }
+
+  .book-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 20px;
+  }
+}
+
 @media (max-width: 1024px) {
+  .books-section {
+    padding: 0 32px 32px 32px;
+  }
+
   .book-section-layout {
     flex-direction: column;
     gap: 24px;
@@ -314,23 +268,33 @@
 
   .book-sidebar {
     width: 100%;
-    padding-top: 32px;
+    padding-top: 0;
   }
 
   .book-sidebar-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
-  /* Hide desktop categories, show dropdown */
   .book-categories {
-    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
   }
 
-  .book-dropdown {
-    display: block;
+  .book-categories li {
+    padding: 0;
+  }
+
+  .book-category-btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .book-category-btn.active {
+    background: rgba(225, 93, 5, 0.1);
   }
 
   .book-list {
@@ -340,19 +304,8 @@
 }
 
 @media (max-width: 768px) {
-  .book-sidebar {
-    padding-top: 32px;
-  }
-
-  .book-sidebar-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-
-  .book-dropdown {
-    width: 100%;
-    max-width: 249px;
+  .books-section {
+    padding: 0 16px 32px 16px;
   }
 
   .book-list {
@@ -370,12 +323,34 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 12px;
   }
+
+  .book-card {
+    min-width: auto;
+  }
 }
 
 @media (max-width: 480px) {
+  .books-section {
+    padding: 0 12px 24px 12px;
+  }
+
   .book-list {
     grid-template-columns: 1fr;
+    gap: 20px;
     max-width: 300px;
     margin: 0 auto;
+  }
+
+  .book-section-title {
+    font-size: 18px;
+  }
+
+  .book-count {
+    font-size: 12px;
+  }
+
+  .book-category-btn {
+    font-size: 14px;
+    padding: 6px 10px;
   }
 }
